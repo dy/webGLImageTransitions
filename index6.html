@@ -11,27 +11,81 @@
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="stylesheet" href="https://use.typekit.net/fex2uvn.css">
 	<link rel="stylesheet" type="text/css" href="css/base.css" />
-	<script>
-	document.documentElement.className = "js";
-	var supportsCssVars = function() { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e };
-	supportsCssVars() || alert("Please view this in a modern browser that supports CSS Variables.");
-	</script>
-	<script src="//tympanus.net/codrops/adpacks/analytics.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://unpkg.com/youtube-background/jquery.youtube-background.js"></script>
 </head>
 
 <body class="demo-6">
 	<main>
 		<div class="frame">
 			<div class="frame__title-wrap">
-				<h1 class="frame__title">WebGL Image Transitions</h1>
+				<h1 class="frame__title">Vraja Vilas Mela</h1>
 			</div>
-			<div class="frame__links">
+
+			<style>
+				/* optional css fade in animation */
+				iframe {
+					transition: opacity 500ms ease-in-out;
+					transition-delay: 250ms;
+				}
+			</style>
+
+			<!-- target element -->
+			<div data-vbg="https://youtu.be/VSXmHAXQPKM" style="opacity: 1;"></div>
+
+			<style>
+				.overflow {
+					opacity: 1;
+					position: absolute;
+					inset: 0;
+					color: white;
+					display: flex;
+					align-items: flex-end;
+					justify-content: center;
+					/* background: linear-gradient(to right, #c82020 0%, transparent 30%, transparent 70%, #c82020 100%) */
+					background: linear-gradient(to right, #c8202010 0%, transparent 30%, transparent 70%, #c8202010 100%), radial-gradient(closest-side, transparent, transparent 80%, #c8202010 180%);
+				}
+				.mahamantra {
+					position: absolute;
+					font-size: 2.8rem;
+					text-align: center;
+					mix-blend-mode: overlay;
+					margin: 1.6rem;
+				}
+				.sh {
+					text-shadow: 0 1px 14px rgba(0, 0, 0, 0.516);
+					mix-blend-mode: normal;
+					opacity: 1;
+					color: #ffffffaa;
+				}
+			</style>
+			<div class="overflow">
+				<div class="mahamantra">
+					Hare Krishna Hare Krishna<br/>
+					Krishna Krishna Hare Hare<br/>
+					Hare Rama Hare Rama<br/>
+					Rama Rama Hare Hare<br/>
+				</div>
+				<div class="mahamantra sh">
+					Hare Krishna Hare Krishna<br/>
+					Krishna Krishna Hare Hare<br/>
+					Hare Rama Hare Rama<br/>
+					Rama Rama Hare Hare<br/>
+				</div>
+			</div>
+
+			<script type="text/javascript">
+					jQuery(document).ready(function() {
+							jQuery('[data-vbg]').youtube_background();
+					});
+			</script>
+			<!-- <div class="frame__links">
 				<a href="https://tympanus.net/Tutorials/GooeyImageHoverEffects/">Previous Demo</a>
 				<a href="https://tympanus.net/codrops/?p=44490">Article</a>
 				<a href="https://github.com/akella/webGLImageTransitions">GitHub</a>
-			</div>
-			<div class="frame__info">Click the image</div>
-			<div class="frame__demos">
+			</div> -->
+			<!-- <div class="frame__demos">
 				<a href="index.html" class="frame__demo">demo 1</a>
 				<a href="index2.html" class="frame__demo">demo 2</a>
 				<a href="index3.html" class="frame__demo">demo 3</a>
@@ -40,19 +94,22 @@
 				<a href="index6.html" class="frame__demo frame__demo--current">demo 6</a>
 				<a href="index7.html" class="frame__demo">demo 7</a>
 				<a href="index8.html" class="frame__demo">demo 8</a>
-			</div>
+			</div> -->
 		</div>
-		<div id="content" class="content">
-			<div id="slider" data-images='["/img/img61.jpg","/img/img62.jpg","/img/img63.jpg","/img/img64.jpg"]' data-disp="/img/disp1.jpg">
+		<!-- <div id="content" class="content">
+			<div id="slider" data-images='["/img/img1.jpeg","/img/img2.jpeg","/img/img3.jpeg","/img/img4.jpeg","/img/img5.jpeg","/img/img6.jpeg"]' data-disp="/img/disp1.jpg">
 			</div>
-		</div>
+		</div> -->
+		<!-- <ken-burns-carousel animation-names="ken-burns-top-middle" style="width: 50%; height: 100vh; display: block" fade-duration="1000"
+    slide-duration="5000" images="/img/img1.jpeg /img/img2.jpeg /img/img3.jpeg /img/img4.jpeg /img/img5.jpeg /img/img6.jpeg">
+		</ken-burns-carousel> -->
 	</main>
-	<script src="js/three.js"></script>
+	<!-- <script src="js/ken-burns-carousel.js"></script> -->
+	<!-- <script src="js/three.js"></script>
 	<script src="js/dat-gui.js"></script>
 	<script src="js/gsap.js"></script>
 	<script src="js/sketch.js"></script>
-	<script src="js/demo6.js"></script>
-	<script src="https://tympanus.net/codrops/adpacks/demoad.js"></script>
+	<script src="js/demo6.js"></script> -->
 </body>
 
 </html>

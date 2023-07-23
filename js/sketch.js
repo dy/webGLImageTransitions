@@ -46,7 +46,7 @@ class Sketch {
       this.clickEvent();
       this.play();
     })
-    
+
 
 
   }
@@ -64,6 +64,11 @@ class Sketch {
     Promise.all(promises).then(() => {
       cb();
     });
+
+    // autoplay
+    setInterval(() => {
+      this.next()
+    }, 5400)
   }
 
   clickEvent(){
@@ -71,6 +76,7 @@ class Sketch {
       this.next();
     })
   }
+
   settings() {
     let that = this;
     if(this.debug) this.gui = new dat.GUI();
@@ -92,7 +98,7 @@ class Sketch {
     this.height = this.container.offsetHeight;
     this.renderer.setSize(this.width, this.height);
     this.camera.aspect = this.width / this.height;
-    
+
 
     // image cover
     this.imageAspect = this.textures[0].image.height/this.textures[0].image.width;
